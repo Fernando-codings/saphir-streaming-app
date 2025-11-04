@@ -1,14 +1,14 @@
-import brcypt from 'bcrypt'
+import bcrypt from 'bcrypt'
 import crypto from "crypto";
 
 // hash mot de passe
 export const hashPassword = async (password:  string) => {
-    return brcypt.hash(password, 10)
+    return bcrypt.hash(password, 10)
 }
 
-// verification du mots de passr
+// verification du mots de passe
 export const comparePassword= async (password: string, hash: string) =>{
-    return brcypt.compare(password, hash);
+    return bcrypt.compare(password, hash);
 }
 
 
